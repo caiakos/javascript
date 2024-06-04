@@ -1,0 +1,178 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Helvetica, sans-serif;
+}
+
+body{
+    background-color: #333745;
+}
+
+header {
+    background-color: #20222B;
+    color: white;
+    padding: 1.5rem;
+    text-align: center;
+    font-size: 1.4rem;
+}
+
+header > p {
+    font-size: 1rem;
+    color: #a5afd7;
+}
+
+main {
+    margin: 2rem 20vw;
+}
+
+main > button {
+    padding: 1rem 2rem;
+    width: 100%;
+    background-color: #8357C5;
+    color: white;
+    font-size: 1.6rem;
+    font-weight: 600;
+    border-radius: 1rem;
+    border: none;
+    cursor: pointer;
+    border-bottom: 0.4rem solid #693cad;
+}
+
+main > button:disabled{
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+main > div {
+    margin: 2rem 0;
+}
+
+main > div > div:nth-child(1) {
+    background-color: #3C4251;
+    display: flex;
+    color: #a5afd7;
+    padding: 0.8rem 1.6rem;
+    justify-content: space-between;
+}
+
+main > div > div:nth-child(1) > a{
+    text-decoration: none;
+    color: #a5afd7;
+}
+main > div > div:nth-child(1) > a:hover{
+    color: white;
+}
+
+main > div > div:nth-child(2) {
+    background-color: #464B5E;
+    color: #a5afd7;
+    text-align: center;
+    padding: 1.6rem;
+    border-bottom: 1px solid #5C627B;
+}
+
+main > div > form {
+    background-color: #464B5E;
+    padding: 1rem 1.6rem;
+    display: flex;
+    gap: 5%;
+}
+
+main > div > form > input {
+     background-color: #333745;
+     border: none;
+     width: 75%;
+     color: #a5afd7;
+     padding: 1rem;
+     border-bottom: 0.2rem solid #1D2028;
+}
+
+main > div > form > button {
+    width: 20%;
+    border-radius: 1rem;
+    background-color: #8357C5;
+    color: white;
+    border: none;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    opacity: 0.8;
+}
+
+main > div > form > button:hover{
+    opacity: 1;
+}
+
+#alert {
+    width: 70vw;
+    padding: 1rem;
+    background-color: red;
+    color: white;
+    position: absolute;
+    bottom: 0;
+    right: 15vw;
+    font-size: 1rem;
+    display: none;
+}
+
+.closebtn{
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    cursor: pointer;
+    transition: 0.5s;
+}
+.closebtn:hover{
+    color: gray;
+}
+
+#butao{
+    cursor: pointer;
+}
+
+div#tasks > ol > li{
+    position: relative;
+    margin-bottom: 1.5vw;
+    border: 1px solid #a5afd7;
+    padding: 10px;
+    border-radius: 5px;
+    line-height: 25px;
+}
+
+
+div#tasks > ol > li > button{
+    position: absolute;
+    color: white;
+    background-color: #8357C5;
+    width: 25px;
+    height: 25px;
+    font-weight: bold;
+    opacity: 0.8;
+    border-radius: 7px;
+}
+
+div#tasks > ol > li > button:hover{
+    background-color: #ac84e9;
+}
+
+.removebutton{
+    right: 10px;
+    font-size: 15px;
+}
+
+.donebutton{
+    right: 39px;
+    font-size: 10px;
+}
+
+.donetask{
+    text-decoration:  line-through;
+    color: green;
+}
+
+#filter{ /* TERMINAR */
+    padding: 3px;
+    background-color: #333745;
+    border-color: #a5afd7;
+}
