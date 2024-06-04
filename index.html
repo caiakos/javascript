@@ -19,7 +19,10 @@
         <div>
           <div>
             <p><strong>Suas Opções</strong></p>
-            <input type="text" id="filter" oninput="filterTasks()" placeholder="Filtrar tarefas..."> <!-- TERMINAR -->
+            <div id="divfilter">
+              <input type="text" id="filter" oninput="filterTasks()" placeholder="Filtrar tarefas..."> <!-- TERMINAR -->
+              <button onclick="filter()"></button>
+            </div>
             <a id="butao" onclick="removeAll()"> Remover todos</a>
           </div>
           <div id="tasks">

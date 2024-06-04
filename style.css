@@ -171,8 +171,25 @@ div#tasks > ol > li > button:hover{
     color: green;
 }
 
-#filter{ /* TERMINAR */
-    padding: 3px;
-    background-color: #333745;
-    border-color: #a5afd7;
+#divfilter{ /* TERMINAR */
+    padding: 5px;
+    border: none;
+    width: 69%;
+    padding-top:1px;
+    margin-right: 30px;
+    font-size:15px;
+    color: #a5afd7;
+    font-size: 15px;
+    background-color: red;
+}
+
+#filter{
+    padding: 5px;
+    background-color: #464B5E;
+    width: 65%;
+    border: none;
+}
+
+#filter::placeholder{
+    color: #a5afd7;
 }
