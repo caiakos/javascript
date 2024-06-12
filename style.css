@@ -134,7 +134,7 @@ main > div > form > button:hover{
 div#tasks > ol > li{ /* style tasks */
     position: relative;
     margin-bottom: 1.5vw;
-    border: 1px solid #a5afd7;
+    background-color: #3C4251;
     padding: 10px;
     border-radius: 5px;
     line-height: 25px;
@@ -142,8 +142,8 @@ div#tasks > ol > li{ /* style tasks */
 
 div#tasks > ol > li > button{ /* style task buttons */
     position: absolute;
-    color: white;
-    background-color: #8357C5;
+    color: #a5afd7;
+    background-color: #5C627B;
     width: 25px;
     height: 25px;
     font-weight: bold;
@@ -151,18 +151,26 @@ div#tasks > ol > li > button{ /* style task buttons */
     border-radius: 7px;
 }
 
-div#tasks > ol > li > button:hover{ /* style task buttons ao passar mouse em cima */
-    background-color: #ac84e9;
+div#tasks > ol > li > .removebutton:hover{ /* style task buttons ao passar mouse em cima */
+    background-color: red;
+    color: white;
+}
+
+div#tasks > ol > li > .donebutton:hover{ /* style task buttons ao passar mouse em cima */
+    background-color: green;
+    color: white;
 }
 
 .removebutton{ /* style task remove button */
-    right: 10px;
+    border: none;
+    right: 25px;
     font-size: 15px;
 }
 
 .donebutton{ /* style task done button */
-    right: 39px;
-    font-size: 10px;
+    border: none;
+    right: 65px;
+    font-size: 15px;
 }
 
 .donetask{ /* style task done text (corta+verde) */
@@ -174,20 +182,25 @@ div#tasks > ol > li > button:hover{ /* style task buttons ao passar mouse em cim
     width: 75%;
 }
 
-#filter{
+#filter{ /* style filter input */
     padding: 5px;
     background-color: #464B5E;
     width: 90%;
     border: none;
-}
-
-#filter::placeholder{
     color: #a5afd7;
 }
 
-#filterclear{
+#filter::placeholder{ /* style filter placeholder */
+    color: #a5afd7;
+}
+
+#filterclear{ /* style filter clear button */
     background-color: #333745;
     padding: 5px;
     border: none;
     color: #a5afd7;
+}
+
+#filterclear:hover{ /* style filter button hover */
+    background-color: #464B5E;
 }

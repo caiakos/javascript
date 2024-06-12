@@ -58,12 +58,16 @@ function updateTasks() { // Adicionar a tarefa
             newLi.innerText = task; // adiciona o texto da task no li
 
             let removeButton = document.createElement('button'); // cria um button
-            removeButton.innerText = 'x'; // adiciona o texto "x" no button
+            let trashIcon = document.createElement('i');
+            trashIcon.classList.add('fas', 'fa-trash-alt'); 
+            removeButton.appendChild(trashIcon);
             removeButton.classList.add('removebutton'); // cria a classe "removebutton" para o button
             removeButton.onclick = () => removeTask(task2); // chama a função removeTask com o argumento da task removida
 
             let doneButton = document.createElement('button'); // cria um button
-            doneButton.innerText = '✔'; // adiciona o texto "✔" no button
+            let checkIcon = document.createElement('i');
+            checkIcon.classList.add('fas', 'fa-check');
+            doneButton.appendChild(checkIcon);
             doneButton.classList.add('donebutton'); // cria a classe "donebutton" para o button
             doneButton.onclick = () => doneTask(task2); // chama a função doneTask com o argumento da Li que está sendo criada
 
