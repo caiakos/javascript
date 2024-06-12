@@ -4,31 +4,30 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>To-Do List</title>
     <link rel="stylesheet" href="style.css">
     <script src="script.js"></script>
-    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
 </head>
-<body onload="taskLoad()">
+<body onload="taskLoad()"> <!-- chama a função taskLoad() ao carregar a página-->
     <header>
         <h1>Seu Gestor de Tarefas Automático</h1>
         <p>Não sabe o que fazer? Deixe seu computador decidir por vc....</p>
       </header>
       <main>
-        <button id="randomButton" onclick="randomTask()" disabled>O que eu devo fazer?</button>
+        <button id="randomButton" onclick="randomTask()" disabled>O que eu devo fazer?</button> <!-- chama a função randomtask() ao clicar (disabled até adicionar uma task)-->
         <div>
           <div>
             <p><strong>Suas Opções</strong></p>
             <div id="divfilter">
-              <input type="text" id="filter" oninput="filterTasks()" placeholder="Filtrar tarefas..."> <!-- TERMINAR -->
-              <button onclick="filter()"></button>
+              <input type="text" id="filter" oninput="filterTask()" placeholder="Filtrar tarefas..."> <!-- chama a função filterTask() ao escrever -->
+              <button id="filterclear" onclick="filterClear()">Limpar</button> <!-- chama a função filterClear() ao clicar -->
             </div>
-            <a id="butao" onclick="removeAll()"> Remover todos</a>
+            <a id="butao" onclick="removeAll()"> Remover todos</a> <!-- chama a função removeAll() ao clicar -->
           </div>
           <div id="tasks">
             <p>Insira a primeira tarefa para começar....</p>
           </div>
-          <form onsubmit="addTask(event)">
+          <form onsubmit="addTask(event)"> <!-- chama a função addTask() ao clicar/ENTER -->
             <input type="text" id="description">
             <button type="submit">Incluir</button>
           </form>
@@ -38,7 +37,7 @@
             <strong id="message_type">Tipo de Mensagem: </strong>
             <span id="message">Mensagem para mostrar para o usuário.</span>
           </p>
-          <span class="closebtn" onclick="closeMessage()">&times;</span>
+          <span class="closebtn" onclick="closeMessage()">&times;</span> <!-- chama a função closeMessage() ao clicar -->
         </div>
       </main>
 </body>

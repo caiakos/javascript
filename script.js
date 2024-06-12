@@ -14,7 +14,7 @@ function taskLoad(){ // inicia ao abrir a página
     updateTasks();
 }
 
-function addTask(event) {
+function addTask(event) { // SEM MUDANÇAS
     event.preventDefault(); // impede a página de recarregar
     let description = document.getElementById('description');
     if (description.value == '') { // checa se a descripton é vazia, null ou undefined
@@ -27,12 +27,12 @@ function addTask(event) {
     }
 }
 
-function closeMessage() { // Fechar mensagem de erro
+function closeMessage() { // Fechar mensagem de erro SEM MUDANÇAS
     let alert = document.getElementById('alert');
     alert.style.display = 'none'; // torna a mensagem de erro invisível
 }
 
-function showMessage() { // Mensagem de erro
+function showMessage() { // Mensagem de erro SEM MUDANÇAS
     let message_type = document.getElementById('message_type');
     message_type.innerText = 'Erro: '; // define o texto a ser exibido
 
@@ -145,4 +145,23 @@ function doneTask(checkTask) {  // Adiciona ou remove a task da taskDoneList
     console.log("taskDoneList atualizado:", taskDoneList);
 
     updateTasks();
+}
+
+function filterTask(){
+    let filter = document.getElementById('filter').value.toLowerCase(); // toLowerCase -> minúscula
+    let tasks = document.getElementsByTagName('li');
+
+    for (let i = 0; i < tasks.length; i++) { // passa por todas as tasks
+        let taskText = tasks[i].innerText.toLowerCase(); // pega o texto da tarefa em minúsculas
+        if (taskText.indexOf(filter) > -1) { // verifica se a task tem o que está sendo filtrado (caso não tenha = -1)
+            tasks[i].style.display = ''; // exibe a task ('' = display padrão)
+        } else {
+            tasks[i].style.display = 'none'; // oculta a task
+        }
+    }
+}
+
+function filterClear() {
+    document.getElementById('filter').value = ''; // limpa o input filtro
+    filterTask(); // chama a função filterTask para atualizar as tasks exibidas
 }

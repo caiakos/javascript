@@ -131,7 +131,7 @@ main > div > form > button:hover{
     cursor: pointer;
 }
 
-div#tasks > ol > li{
+div#tasks > ol > li{ /* style tasks */
     position: relative;
     margin-bottom: 1.5vw;
     border: 1px solid #a5afd7;
@@ -140,8 +140,7 @@ div#tasks > ol > li{
     line-height: 25px;
 }
 
-
-div#tasks > ol > li > button{
+div#tasks > ol > li > button{ /* style task buttons */
     position: absolute;
     color: white;
     background-color: #8357C5;
@@ -152,44 +151,43 @@ div#tasks > ol > li > button{
     border-radius: 7px;
 }
 
-div#tasks > ol > li > button:hover{
+div#tasks > ol > li > button:hover{ /* style task buttons ao passar mouse em cima */
     background-color: #ac84e9;
 }
 
-.removebutton{
+.removebutton{ /* style task remove button */
     right: 10px;
     font-size: 15px;
 }
 
-.donebutton{
+.donebutton{ /* style task done button */
     right: 39px;
     font-size: 10px;
 }
 
-.donetask{
+.donetask{ /* style task done text (corta+verde) */
     text-decoration:  line-through;
     color: green;
 }
 
-#divfilter{ /* TERMINAR */
-    padding: 5px;
-    border: none;
-    width: 69%;
-    padding-top:1px;
-    margin-right: 30px;
-    font-size:15px;
-    color: #a5afd7;
-    font-size: 15px;
-    background-color: red;
+#divfilter{ /* style filter*/
+    width: 75%;
 }
 
 #filter{
     padding: 5px;
     background-color: #464B5E;
-    width: 65%;
+    width: 90%;
     border: none;
 }
 
 #filter::placeholder{
+    color: #a5afd7;
+}
+
+#filterclear{
+    background-color: #333745;
+    padding: 5px;
+    border: none;
     color: #a5afd7;
 }
